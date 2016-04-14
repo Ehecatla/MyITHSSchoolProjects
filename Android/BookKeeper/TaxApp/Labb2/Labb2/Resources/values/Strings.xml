@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">Labb2</string>
+	<string name="menu_btn_1_txt">New Entry</string>
+	<string name="menu_btn_2_txt">Show All Entries</string>
+	<string name="menu_btn_3_txt">Create Rapport</string>
+
+	<string name="new_entry_tv_1">Here you may add new etrys, either income or expenditure.</string>
+	<string name="new_entry_radio_1">Income</string>
+	<string name="new_entry_radio_2">Expenditure</string>
+	<string name="new_entry_tv_2">Date: </string>
+	<string name="new_entry_tv_3">Description: </string>
+	<string name="new_entry_tv_4">Type: </string>
+	<string name="new_entry_tv_5">To/From account: </string>
+	<string name="new_entry_tv_6">Total amount(inclusive tax): </string>
+	<string name="new_entry_tv_7">Tax: </string>
+	<string name="new_entry_btn_1">Add Entry</string>
+	<string name ="new_entry_et_2_hint">YYYY-MM-DD</string>
+	<string name ="new_entry_sp4_prompt">Choose account</string>
+	<string name ="new_entry_sp5_prompt">Choose money account</string>
+	<string name ="new_entry_sp7_prompt">Choose tax</string>
+
+	<string name ="raport_button_1_txt">Create Tax Report</string>
+	<string name ="raport_title_text">Tax report</string>
+
+	<string name ="error_message_empty">Action aborted. Fill all the fields first.</string>
+	<string name ="error_message_date">Action aborted. Invalid date format. Must be YYYY-MM-DD</string>
+	<string name ="error_message_number">Action aborted. Invalid sum, must be positive decimal.</string>
+	<string name ="error_message_sync">Action aborted, data is out ouf sync. Try restarting application</string>
+	<string name ="error_message_unknown">Action aborted. Unknown error.</string>
+	<string name="message_entry_added">Entry added successfully!</string>
+
+	<string name="entry_details_income">Entry type: Income</string>
+	<string name="entry_details_expense">Entry type: Expense</string>
+	<string name="entry_details_register">Register number: #</string>
+	<string name="entry_details_error_title">Error!</string>
+	<string name="entry_details_error_body">An error has occured, no entry data could be received.</string>
+</resources>

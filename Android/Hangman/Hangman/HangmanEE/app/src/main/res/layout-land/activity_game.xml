@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/game_picture"
+        android:layout_marginTop="@dimen/margin_title_to_top"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/game_picture_description"
+        android:src="@drawable/hangman10" />
+
+    <TextView
+        android:id="@+id/game_word"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/game_picture"
+        android:layout_toEndOf="@id/game_picture"
+        android:layout_below="@id/game_letters_used"
+        android:textSize="@dimen/word_big_size"
+        android:text="@string/game_word_text"/>
+
+    <TextView
+        android:id="@+id/game_attempts"
+        android:layout_alignTop="@id/game_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/game_picture"
+        android:layout_toEndOf="@id/game_picture"
+        android:text="@string/game_attempts_text"/>
+
+    <TextView
+        android:id="@+id/game_attempts_2"
+        android:layout_alignTop="@id/game_picture"
+        android:layout_marginLeft="@dimen/margin_between_text"
+        android:layout_marginStart="@dimen/margin_between_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/game_attempts"
+        android:layout_toEndOf="@id/game_attempts"
+        android:text="@string/game_attempts_2"/>
+
+    <TextView
+        android:id="@+id/game_letters_used"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_attempts"
+        android:layout_toRightOf="@id/game_picture"
+        android:layout_toEndOf="@id/game_picture"
+        android:text="@string/game_letters_text"/>
+
+    <TextView
+        android:id="@+id/game_letters_used_2"
+        android:layout_marginLeft="@dimen/margin_between_text"
+        android:layout_marginStart="@dimen/margin_between_text"
+        android:layout_width="match_parent"
+        android:layout_below="@id/game_attempts_2"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/game_letters_used"
+        android:layout_toEndOf="@id/game_letters_used"
+        android:text="@string/game_letters_text_2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/game_input"
+            android:inputType="text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/game_input_field"/>
+
+        <Button
+            android:id="@+id/game_button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game_button_1_text"
+            android:onClick="startOnGuessButtonClicked"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

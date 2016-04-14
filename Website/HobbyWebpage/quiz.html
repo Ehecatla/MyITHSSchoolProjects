@@ -1,0 +1,119 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <title>WoW Maniac</title>
+
+    <!-- Quiz webpage is supposed to contain game faction quiz in future. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="mycss.css" />
+    <script src="myJS.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h2>World of Warcraft Maniac</h2>
+    </header>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid ">  
+
+        <div class="navbar-header" >
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">WoW-Maniac</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav ">
+            <li ><a href="index.html">Home </a></li>
+            <li><a href="news.html">News</a></li>
+            <li class="dropdown active">
+              <a href="articles.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Articles<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li> <a href="review.html">Review</a></li>
+                <li class="active"> <a href="quiz.html">Quiz<span class="sr-only">(current)</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="aboutGame.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About game<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="aboutGame.html">General</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="aboutGameFactions.html">Factions</a></li>
+                <li><a href="aboutGameClasses.html">Classes</a></li>
+              </ul>
+            </li>
+          </ul>        
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid ">
+
+      <div class="row well some-opacity">
+        <div class="col-lg-12 ">
+
+          <div class="row ">
+            <div class="col-lg-12">
+             <h3>Quiz - Which faction is best suited for you?</h3>
+            </div>
+          </div>
+
+          <div class="row panel">
+            <div class="col-lg-12">
+              <p id="questionText">The quiz have not been added yet. But if you want then you can see some cool Wow picture instead.</p>
+              <button id="questionButton" type="button" class="btn btn-lg btn-default" data-toggle="modal" data-target="#pictureModal">Show it!</button>
+
+              <div class="modal" id="pictureModal">
+                <div class="modal-dialog">
+
+                  <div class="modal-content">
+
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span ariahidden="
+                      true">&times;</span>
+                      </button>
+                      <h4 class="modal-title">Are you sure you want to see that picture?</h4>
+                    </div>
+
+                    <div class="modal-body">
+                      <p>This is some cool artwork from World of Warcraft:Legion. It may be a spoiler to you so please reconsider!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Abort</button>
+                      <button type="button" class="btn btn-primary" id="showButton">Show anyway</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div id="spoiler-picture">
+                <p>You have decided to see the picture! Illidan is coming back in Legion expansion!!!</p>
+               <img src="spoiler.jpg" class="img-responsive center-block img-rounded"  alt="Spoiler picture">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>No rights reserved.</p>
+    </footer>
+
+  </body>
+
+</html>

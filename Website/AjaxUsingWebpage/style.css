@@ -1,0 +1,32 @@
+.menu {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    float: left;
+    width: 6em;
+}
+
+
+.article-view {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    float: left;
+    width: 30em;   
+}
+
+.title span{
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+.author span{
+    font-style: italic;
+}
+
+.date span{
+    font-style: italic;
+}
+
+
+

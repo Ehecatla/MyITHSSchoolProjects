@@ -1,0 +1,28 @@
+.list-div {
+    border: 1px solid black;
+    height: 300px;  
+    background-color: white;
+    overflow: auto;
+}
+
+input {
+   width: 300px;
+   border: 1px solid black;
+}
+
+body {
+    background-color: lightblue;  
+}
+
+button {
+    margin: 0 auto; 
+    width: 148px;
+}
+
+div {
+    width: 300px;
+}
+
+.list-div div {
+    border-bottom: 1px dashed slategray;
+}

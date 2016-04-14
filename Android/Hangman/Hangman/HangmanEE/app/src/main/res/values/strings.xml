@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="menu_title_text">Hangman</string>
+    <string name="about_title_text">About</string>
+    <string name="about_text">This application was made by Ella Einarsen.</string>
+    <string name="menu_button_2_text">About</string>
+    <string name="menu_button_1_text">Play</string>
+    <string name="result_title_text">You won!</string>
+    <string name="result_word_text">The word is:</string>
+    <string name="result_attempt_text">Number attempts remaining:</string>
+    <string name="game_word_text">----</string>
+    <string name="game_attempts_text">Attempts remaining:</string>
+    <string name="game_letters_text">Letters used:</string>
+    <string name="game_button_1_text">Guess!</string>
+    <string name="game_input_field"> </string>
+    <string name="result_button_1_text">Main menu</string>
+    <string name="action_bar_about">About</string>
+    <string name="action_bar_play">Play</string>
+    <string name="menu_activity_display_message">Menu</string>
+    <string name="about_activity_display_message">About</string>
+    <string name="game_activity_display_message">Game</string>
+    <string name="result_activity_display_message">Result</string>
+    <string name="game_attempts_2" />
+    <string name="game_letters_text_2" />
+    <string name="result_word_text_2" />
+    <string name="win_message">You won!</string>
+    <string name="lost_message">You lost!</string>
+    <string name="wrong_input_m_1">You must write a letter!</string>
+    <string name="wrong_input_m_2">Must be only one letter!</string>
+    <string name="wrong_input_m_3">You have already used this letter!</string>
+    <string name="wrong_input_m_4">Invalid input, not a letter!</string>
+    <string name="game_picture_description">Hangman picture</string>
+
+</resources>

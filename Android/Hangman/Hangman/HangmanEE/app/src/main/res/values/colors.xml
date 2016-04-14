@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryGray">#b4b5bc</color>
+    <color name="colorPrimaryDarkGray">#757579</color>
+    <color name="colorAccentBlack">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="holo_light_primary">#bcbcbc</color>
+    <color name="accent_material_light">#969798</color>
+</resources>
