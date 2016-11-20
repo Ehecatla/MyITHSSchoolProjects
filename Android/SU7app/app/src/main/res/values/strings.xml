@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SU7app</string>
+    <string name="draw_activity_label">Simple Draw</string>
+    <string name="interaction_activity_label">Interaction</string>
+    <string name="animation_activity_label">Animation</string>
+    <string name="own_activity_label">Own Activity</string>
+    <string name="choose_color">Choose color:</string>
+    <string name="app_author">Ella Einarsen</string>
+
+    <array name="color_array">
+        <item>Default black</item>
+        <item>Blue...ish</item>
+        <item>Green..like</item>
+        <item>Yellow...about</item>
+    </array>
+
+    <array name="color_array_values">
+        <item>@color/defaultBlack</item>
+        <item>@color/blueIsh</item>
+        <item>@color/greenIsh</item>
+        <item>@color/yellowLike</item>
+    </array>
+
+</resources>
