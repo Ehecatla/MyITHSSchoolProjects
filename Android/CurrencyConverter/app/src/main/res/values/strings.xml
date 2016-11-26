@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="from_tv">From:</string>
+    <string name="amount_tv">Amount:</string>
+    <string name="to_tv">To:</string>
+    <string name="result_et"> </string>
+    <string-array name="currency_name_array">
+        <item>---</item>
+        <item>AUD</item>
+        <item>USD</item>
+        <item>SEK</item>
+        <item>EURO</item>
+        <item>YEN</item>
+    </string-array>
+    <string-array name="currency_value_array">
+        <item>0.0</item>
+        <item>6.91</item>
+        <item>6.69</item>
+        <item>1.0</item>
+        <item>8.67</item>
+        <item>0.0837</item>
+    </string-array>
+</resources>
