@@ -1,11 +1,12 @@
 Project teamworkers:
 Ella Einarsen - responsible for user and guest account coding&design
 Christian Heina
-Magdalena Erliksson
 Bartek Svaberg
 Filip Winbo
 Monika Svensson
 Roy Josefsson
+Kozue wenden
+
 
 Short information:
 
