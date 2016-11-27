@@ -1,0 +1,26 @@
+<div class='container '>
+  <div class="gradient">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="italic">Search parking</h1>
+    </div>
+  </div>
+</div>
+<!--</div><div class="col-xs-12 col-md-2" ></div>
+<div class="col-xs-12 col-md-8 well transparent-low-fill padding-bottom padding-top" id="quickSearch">
+  <div class="row">-->
+    <div class="row margin-top">
+      <div class="col-xs-12">
+        <input type="text" class="input-lg fill-horizontal address" placeholder="Enter address" [(ngModel)]="destination.address">
+      </div>
+      <div class="col-xs-12">
+        <button class="btn btn-info btn-lg fill-horizontal margin-top" (click)="quickFindParking()">Find Parking</button>
+        <button class="btn btn-info btn-lg fill-horizontal margin-top" id="showNearMe" (click)="showParkingsOnMap()">Parkings near me <img src="near-me.png" style="width:35px;height:32px;"></button>
+      </div>
+    </div>
+    <div *ngIf="loadingParkings==true" style="float:right">
+        Loading parkings...
+    </div>
+</div>
+  <!--</div><div class="col-xs-12 col-md-2" ></div>-->
+

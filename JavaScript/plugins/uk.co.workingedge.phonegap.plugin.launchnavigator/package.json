@@ -1,0 +1,94 @@
+{
+  "_args": [
+    [
+      "uk.co.workingedge.phonegap.plugin.launchnavigator",
+      "/Users/barteksvaberg/Documents/find-parking-goteborg"
+    ]
+  ],
+  "_from": "uk.co.workingedge.phonegap.plugin.launchnavigator@latest",
+  "_id": "uk.co.workingedge.phonegap.plugin.launchnavigator@3.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/uk.co.workingedge.phonegap.plugin.launchnavigator",
+  "_nodeVersion": "4.2.4",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/uk.co.workingedge.phonegap.plugin.launchnavigator-3.1.1.tgz_1464009247899_0.35789087042212486"
+  },
+  "_npmUser": {
+    "email": "dave@workingedge.co.uk",
+    "name": "davealden"
+  },
+  "_npmVersion": "3.9.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "raw": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/uk.co.workingedge.phonegap.plugin.launchnavigator/-/uk.co.workingedge.phonegap.plugin.launchnavigator-3.1.1.tgz",
+  "_shasum": "aa4ebc1b603bccf31cd92ae65483bd98b086437d",
+  "_shrinkwrap": null,
+  "_spec": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+  "_where": "/Users/barteksvaberg/Documents/find-parking-goteborg",
+  "author": {
+    "name": "Dave Alden"
+  },
+  "bugs": {
+    "url": "https://github.com/dpa99c/phonegap-launch-navigator/issues"
+  },
+  "cordova": {
+    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8",
+      "windows"
+    ]
+  },
+  "cordova_name": "Launch Navigator",
+  "dependencies": {},
+  "description": "Cordova/Phonegap plugin to navigate to a destination using native navigation apps on Android, iOS, and Windows Phone",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "aa4ebc1b603bccf31cd92ae65483bd98b086437d",
+    "tarball": "https://registry.npmjs.org/uk.co.workingedge.phonegap.plugin.launchnavigator/-/uk.co.workingedge.phonegap.plugin.launchnavigator-3.1.1.tgz"
+  },
+  "gitHead": "5f6a0758e4baf9b6945f7c82f3da6389f7673e60",
+  "homepage": "https://github.com/dpa99c/phonegap-launch-navigator#readme",
+  "issue": "https://github.com/dpa99c/phonegap-launch-navigator/issues",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "phonegap",
+    "ios",
+    "android",
+    "windows",
+    "wp8",
+    "navigation",
+    "navigator"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "email": "dave@workingedge.co.uk",
+      "name": "davealden"
+    }
+  ],
+  "name": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpa99c/phonegap-launch-navigator.git"
+  },
+  "scripts": {},
+  "version": "3.1.1"
+}

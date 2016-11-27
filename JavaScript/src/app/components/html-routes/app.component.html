@@ -1,0 +1,68 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display TODO!! -->
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#meny-gbg-nav" aria-expanded="false" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/SearchParking']">
+        <img alt="Brand" 
+        src="goteborg-stad-logo.png" 
+        onmouseover="this.src='goteborg-stad-logo-over.png'" 
+        onmouseout="this.src='goteborg-stad-logo.png'"
+        onmousedown="this.src='goteborg-stad-logo-down.png'" 
+        onmouseup="this.src='goteborg-stad-logo-over.png'">
+      </a>
+    
+      <!-- This works well for static text, like a username -->
+      <p class="navbar-text pull-left collapsed hidden-on-desktop-e">FindParking</p>
+      <!-- Add any additional bootstrap header items.  This is a drop-down from an icon -->
+      <a *ngIf="accountService.isLoggedIn" class="hidden-on-desktop-e">
+        <p *ngIf="accountService.isLoggedIn" class=" navbar-text pull-right collapsed tiny-marign-right" data-toggle="dropdown" href="#">
+              {{accountService.user.name}}
+            <span class="caret"></span>
+            </p>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="#" [routerLink]="['/Settings']">Settings</a></li>
+              <li><a href="#" (click)="logout()">Logout</a></li>
+            </ul>
+        </a>
+      
+
+    </div>
+
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="meny-gbg-nav" data-toggle="collapse" data-target="#meny-gbg-nav">
+      <ul class="nav navbar-nav">
+        <li><a class="nav-meny-btn" [routerLink]="['/SearchParking']">Search parking</a></li>
+        <li *ngIf="accountService.isLoggedIn"><a class="nav-meny-btn" [routerLink]="['/Create', {tripStatus: 'new'}]">Create trip</a></li>
+        <li *ngIf="accountService.isLoggedIn"><a class="nav-meny-btn" [routerLink]="['/MyTrips']">My trips</a></li> 
+
+        <!-- <li><a href="#">Account</a></li>  Manage user account thingie -->
+      </ul>
+     
+      <!--Right side of navbar, use for login. maybe use own component here -->
+      <ul class="nav navbar-nav navbar-right">  
+        <li *ngIf="!accountService.isLoggedIn"><a class="nav-meny-btn" [routerLink]="['/Register']" >Register</a></li>     
+        <li *ngIf="!accountService.isLoggedIn"><a class="nav-meny-btn" [routerLink]="['/Login']" >Login</a></li>
+        <li *ngIf="accountService.isLoggedIn">
+          <a class="btn dropdown-toggle nav-meny-btn" data-toggle="dropdown" href="#">
+          {{accountService.user.name}}
+          <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" [routerLink]="['/Settings']">Settings</a></li>
+            <li><a href="#" (click)="logout()">Logout</a></li>
+          </ul>
+       </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<router-outlet></router-outlet>

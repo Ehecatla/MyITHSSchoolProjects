@@ -1,0 +1,46 @@
+<div class='container '>
+    <div class="gradient">
+        <div class='row'>
+        <div class='col-xs-12'>
+            <h1 class="italic">{{chosenTrip.name}}</h1>
+        </div>
+    </div>
+</div>
+<!--<div class="container-p">-->
+<div class='row margin-top'>
+    <div class='col-xs-12'>
+        <h4>Trip description</h4>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-body">{{chosenTrip.description}}</div>
+    </div>
+<div class='row'>
+    <div class='col-xs-12'>
+        <h4>Destinations & comments</h4>
+    </div>
+    <div *ngIf="loadingMap==true">
+        Loading map...
+    </div>
+</div>
+    <div *ngIf='chosenTrip.destinations.length > 0'>
+        <div class="panel panel-default" *ngFor='let destination of chosenTrip.destinations; let i = index '>
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#{{i}}">{{destination.address}}
+                    <span class="accordionSpan">
+                      <button id="parkingIcon" class="btn btn-sm" data-toggle="modal" (click)="showParking(destination)"><img src="time-parking-24-tim.png" style="width:20px;height:20px;"></button>
+                    </span>
+                  </a>
+                </h4>
+            </div>
+            <div id="{{i}}" class="panel-collapse collapse">
+                <div class="panel-body" *ngFor='let comment of destination.comments'>{{comment.text}}</div>
+            </div>
+        </div>
+      </div>
+      <button (click)="editTrip()" class="btn btn-lg btn-info margin-top fill-horizontal">Edit</button>
+      <button (click)="backToMyTrip()" class="btn btn-lg btn-info fill-horizontal margin-top">Back to my trips</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<router-outlet></router-outlet>
+
+<div class="navbar-padding-bottom"></div>
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav col-xs-6 center-horizontal">
+      <li><a class="nav-meny-btn" [routerLink]="['./Trip']">Trip</a></li>
+    </ul>
+    <ul class="nav navbar-nav col-xs-6 center-horizontal">  
+      <li><a class="nav-meny-btn" [routerLink]="['./Destination', {index: -1}]">Destination</a></li>     
+    </ul>
+  </div>
+</nav>

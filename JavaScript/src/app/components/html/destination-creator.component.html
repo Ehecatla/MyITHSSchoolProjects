@@ -1,0 +1,72 @@
+<div class="container no-padding">
+  <div class="gradient">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="italic">{{destinationCreatorTitle}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Address:</h4>
+    </div>
+    <div class="col-xs-12">
+      <input type="text" class="input-lg fill-horizontal address" [(ngModel)]="destination.address">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Parking time (minutes):</h4>
+    </div>
+    <div class="col-xs-12">
+      <input type="number" min="0" class="input-lg fill-horizontal" [(ngModel)]="destination.time">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Comments:</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" *ngIf="destination.comments.length < 1">
+      <p class="colorPi">There are no comments for this destination</p>
+    </div>
+    <div class="row margin-bottom" *ngFor="let comment of destination.comments; let i = index">
+      <div class="col-xs-10 no-padding-right">
+        <input type="text" class="input-lg fill-horizontal comment" [(ngModel)]="comment.text">
+      </div>
+      <div class="col-xs-2 no-padding-left">
+        <button (click)="setCount(i)" data-toggle ='modal' data-target='#deleteCommentModal' class="btn btn-danger btn-lg fill-horizontal">X</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 margin-top margin-bottom">
+    <button (click)="newComment()" class="btn btn-info btn-lg fill-horizontal">New Comment</button>
+  </div>
+  <div class="col-xs-12 margin-top margin-bottom">
+    <button (click)="addDestination()" class="btn btn-info btn-lg fill-horizontal">{{destinationCreatorButtonText}}</button>
+  </div>
+</div>
+<!-- Modal -->     
+<div id="deleteCommentModal" class="modal fade" role='dialog'>
+  <div class="modal-dialog">
+    
+    <!--Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this comment?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteComment()" >YES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- (click)="deleteComment(i)" -->
+

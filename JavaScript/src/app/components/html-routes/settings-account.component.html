@@ -1,0 +1,62 @@
+<div class='container '>
+
+ <div class='row gradient'>
+    <div class='col-lg-12'>
+    	<h1 class='headerCenter italic'>Settings</h1>
+    </div> 
+ </div>
+  <div class='row'>
+    <div class='col-lg-12'>
+      	<div>
+        	<p>Change your account details here, {{_userAccount.name}}</p>
+      	</div>
+    </div>	
+  </div>
+  
+
+  <div class='row'>
+    
+    <div class=' col-xs-12'>
+      <h4 class=''>Username:</h4>  
+    </div>
+    <div class='col-md-6 col-xs-12 margin-bottom'>
+      <input type='text' class='form-control input-lg' placeholder='{{_userAccount.name}}' disabled >
+    </div>
+    
+    <div class=' col-xs-12 margin-top'>
+      <h4  class=''>Password:</h4>  
+    </div>
+    <div class='col-md-6 col-xs-12'>
+      <input type='password' class='form-control input-lg' placeholder='Password' [(ngModel)]='_formPassword'>
+    </div>
+    <div class='col-md-6 col-xs-12'>
+      <input type='password' class='form-control input-lg' placeholder='New password' [(ngModel)]='_formNewPassword'>
+    </div>
+    
+    <div class='col-md-12 col-xs-12'>
+      <button type='submit' class='btn btn-info btn-lg fill-horizontal margin-top'(click)='updateAccountPassword()'>Update password</button>
+    </div>
+    <div class='col-md-6 col-xs-12 margin-bottom'>
+      <account-feedback [feedback]='_feedbackPass'></account-feedback>  
+    </div>
+    
+    <div class='col-xs-12 margin-top'>
+      <h4  class=''>E-mail:</h4>  
+    </div>
+    <div class='col-md-6 col-xs-12'>
+      <input type='email' class='form-control input-lg' placeholder=' ' [(ngModel)]='_formOldEmail' disabled>
+    </div>
+    <div class='col-md-6 col-xs-12'>
+        <input type='email' class='form-control input-lg' placeholder='New email' [(ngModel)]='_formNewEmail'>
+    </div>
+  
+    <div class='col-md-12 col-xs-12'>
+      <button type='submit' class='btn btn-info btn-lg fill-horizontal margin-top'(click)='updateAccountEmail()'>Update e-mail</button>
+    </div>
+    <div class='col-md-6 col-xs-12'>
+      <account-feedback class='' [feedback]='_feedbackEmail'></account-feedback> 
+    </div>
+    
+  </div>
+ 
+</div>

@@ -1,0 +1,243 @@
+h1.italic {
+    font-family: Georgia;
+    font-style: italic;
+    color: #B55173;
+    text-align: center;
+    
+}
+
+.btn-submit{
+    float:right;
+    margin-left: 5pt;
+}
+
+/*.btn {
+    float: right;
+}*/
+
+.field-input-invalid{
+    border: 2px solid red;
+}
+
+/*.row well, .row, .form-group{
+    background-color: rgba(255, 255, 255, 0.01);
+}*/
+
+/*.login-bar{
+    float: right;
+}*/
+
+/*.container {
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+}*/
+
+
+
+.mainDiv {
+    margin: 100px auto;
+}
+
+.row {
+    margin: 0 1em;
+    margin-top: 10px; 
+}
+
+.previousTrips {
+     overflow: auto; 
+     height: 320px;
+     margin-bottom: 20px;
+     margin-top: 20px;
+}
+
+.previousTripText {
+    margin: 0 1em;
+    color: black;  
+}
+
+.header {
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.header4 {
+    text-align: left;
+}
+
+
+@media(max-width:466px){
+    #tbody{
+        font-size:10px;
+    }
+    .row .btn-submit{
+        font-size: 10px;
+    }    
+}
+
+@media(max-width:576px){
+    #parking{
+        font-size:9px;
+    }
+    .row,.well{
+        margin:0;
+    }
+
+@media(min-width:577px){
+
+}
+    
+
+    
+    .map-modal-h-f{
+        padding: 5px;
+    }
+    
+    .map-modal-b{
+        padding: 0px;
+    }
+    
+    .map-modal-1{
+        margin: 0px;
+    }
+    
+}
+
+/* meny */
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    max-height: 100%;
+}
+
+.active-color {
+    background-color: lightblue;
+}
+
+.padding-bottom {
+    padding-bottom: 16px;
+}
+
+.padding-top {
+    padding-top: 16px;
+}
+
+.margin-bottom {
+   margin-bottom: 8px; 
+}
+
+.margin-top {
+    margin-top: 8px;
+}
+
+margin-right {
+    margin-right: 8px;
+}
+
+margin-left {
+    margin-left: 8px;
+}
+
+.no-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+.no-padding-right {
+    padding-right: 0px;
+}
+
+.no-padding-left {
+    padding-left: 0px;
+}
+
+.transparent-high {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.transparent-medium {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.transparent-low {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.transparent-high-fill {
+    background: rgba(255, 255, 255, 0.6);
+    height: 100%;
+}
+
+.transparent-medium-fill {
+    background: rgba(255, 255, 255, 0.4);
+    height: 100%;
+}
+
+.transparent-low-fill { 
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+}
+
+.fill-horizontal {
+    width: 100%;
+}
+
+.fill-vertical {
+    height: 100%;
+}
+
+.center-horizontal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-padding-bottom {
+    padding-bottom: 70px;
+}
+
+#quickSearch {
+    margin-top: 100px;
+    display: block;
+}
+
+.accordionSpan {
+    float: right;
+}
+
+
+
+.headerCenter{
+    text-align: center;
+}
+
+#parkingMap{
+    position: absolute; 
+    height: 0;
+    overflow: hidden; 
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+

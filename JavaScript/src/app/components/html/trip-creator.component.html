@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="gradient">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="italic">Create Trip</h1>
+      </div>
+    </div>
+</div>
+  <div class="row margin-top">
+    <div class="col-xs-12">
+      <h4>Name:</h4>
+    </div>
+    <div class="col-xs-12">
+      <input type="text" class="input-lg fill-horizontal name" [(ngModel)]="tripsService.activeTrip.name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Description:</h4>
+    </div>
+    <div class="col-xs-12">
+      <input type="text" class="input-lg fill-horizontal" [(ngModel)]="tripsService.activeTrip.description">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>Destinations:</h4>
+    </div>
+  </div>
+  <div class="row container">
+    <div *ngIf="tripsService.activeTrip.destinations.length > 0">
+      <accordion closeOthers="true">
+        <div class="margin-top margin-bottom" *ngFor="let destination of tripsService.activeTrip.destinations; let i = index">
+          <accordion-group panelClass="panel-success">
+          <div class="container" accordion-heading="true">
+            <div class="col-xs-9">
+              {{ destination.address }}
+            </div>
+            <div class="col-xs-3">
+              <button (click)="setCount(i)" data-toggle ='modal' data-target='#deleteDestinationModal' class="btn btn-danger btn-lg fill-horizontal no-padding margin-right">X</button>
+            </div>
+          </div>
+          <div>
+            <div class="col-xs-12"><h5>Address: {{destination.address}}</h5></div>
+            <div class="col-xs-12"><h5>Time: {{destination.time}}</h5></div>
+            <div class="col-xs-12" *ngIf="destination.comments.length > 0"><h5>Comments:</h5></div>
+            <div class="col-xs-12" *ngFor="let comment of destination.comments">{{comment.text}}</div>
+            <div>
+              <button (click)="editDestination(i)" class="btn btn-primary">Edit</button>
+            </div>
+          </div>
+        </accordion-group>
+        </div>
+      </accordion>
+    </div>
+    <div *ngIf="tripsService.activeTrip.destinations.length < 1">
+      <div class="col-xs-12">
+        <p>No Destinations attached to this trip</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 margin-top margin-bottom">
+    <button (click)="newDestination()" class="btn btn-info btn-lg fill-horizontal">New Destination</button>
+  </div>
+  <div class="col-xs-12 margin-top margin-bottom">  
+    <button (click)="saveTrip()" class="btn btn-info btn-lg fill-horizontal">Save</button>
+  </div>
+</div>
+
+<!-- Modal -->     
+<div id="deleteDestinationModal" class="modal fade" role='dialog'>
+  <div class="modal-dialog">
+    
+    <!--Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this destination?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteDestination()">YES</button>
+      </div>
+    </div>
+  </div>
+</div>
+

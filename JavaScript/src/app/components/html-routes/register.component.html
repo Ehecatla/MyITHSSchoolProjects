@@ -1,0 +1,26 @@
+<div class='row'  (keypress)="enterHandler($event)">
+  <div class=' col-xs-12 login-bar  gradient'>
+    <h1 class='headerCenter italic'>Register account</h1>
+  </div>   
+</div>
+<div class='row' id='account-form' (keypress)="enterHandler($event)">
+  <div class=' col-xs-12 login-bar  '>
+    
+    <div>
+      <div class='form-group'>
+        <label for='rg-username' class='h4'>Name</label>
+        <input type='text' [(ngModel)]='userAccount.name' class='form-control input-lg ' id='rg-username' placeholder='User'>
+        <label for='rg-useremail' class='h4'>E-mail</label>
+        <input type='email' [(ngModel)]='userAccount.email' class='form-control input-lg ' id='rg-useremail' placeholder='user@hotmail.com'>  
+        <label for='rg-password' class='h4'>Password (8 or more characters)</label>
+        <input type='password' [(ngModel)]='userAccount.logInPassword' class='form-control input-lg ' id='rg-password' placeholder='Password'>
+        <label for='rg-repeat-password' class='h4'>Repeat password</label>
+        <input type='password' [(ngModel)]='userAccount.repeatPassword' class='form-control input-lg ' id='rg-repeat-password' placeholder='Password'> 
+        <button id='rg-confirm-btn-account' type='submit' class='btn btn-info btn-lg fill-horizontal margin-top' (click)='createUser()'>Register</button> 
+        <account-feedback [feedback]="feedback"></account-feedback>     
+      </div>
+    </div>
+  </div>
+</div> 
+  
+

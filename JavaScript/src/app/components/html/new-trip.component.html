@@ -1,0 +1,96 @@
+<div class= 'container transparent-low well' id='create-trip-m'> 
+ <div class="gradient">   
+  <div class='row'>
+    <div class='col-md-12 header4'>
+      <h1 class='header'>Trip Planner</h1>
+      <h4>Create your trip here</h4>  
+    </div>
+  </div>
+ </div>
+    
+  <div class='row well transparent-medium' id='single-destination-form'>
+    <form>
+      <div class='col-md-12'> 
+              
+        <div class='row'>
+          <div class='col-md-4'>
+            <div class='form-group'>
+              <label for='adress'>Trip Name*</label>
+              <input type='text' [(ngModel)]='newTrip.name' class='form-control' id='name' placeholder='Trip'>  
+            </div>
+          </div>
+          <div class='col-md-8'>
+            <div class='form-group'>
+              <label for='adress'>Description (Optional)</label>
+              <input type='text' [(ngModel)]='newTrip.description' class='form-control' id='comment-to-trip' placeholder='Description'>  
+            </div>
+          </div>
+        </div>
+        <div class ='header4'>
+          <h4>Destinations</h4>
+        </div>
+        <div class='row' *ngFor='let destination of newTrip.destinations'>
+                
+          <div class='col-md-6'>
+            <div class='form-group'>
+              <label for='adress'>Address*</label>
+              <input type='text' [(ngModel)]='destination.address' class='form-control adress-field' id='adress' placeholder='City, Street, Number'>  
+              <button id='findParking' class='btn btn-default btn-sm margin-top' (click)='findParking(destination)'>Find Parking</button>
+            </div>
+          </div>
+          <div class='col-md-6'>
+            <div class='form-group'>
+              <label for='time-input'>Parking Time (Optional)</label>
+              <input type='number' min = '0'[(ngModel)]='destination.time' class='form-control' id='time' placeholder='mins'>
+            </div>                        
+          </div>
+          <div class='col-xs-12' *ngIf='destination.parking.length > 0'>
+            <parking-list [destination]="destination"></parking-list>
+          </div>
+          <div class='col-md-12'>
+            <div class='form-group'>
+              <label for='note'>Comment (Optional):</label><br>
+              <div *ngIf='destination.comments'>
+                <div *ngFor='let comment of destination.comments'>
+                  <input type='text' [(ngModel)]='comment.text' class='form-control comment-field' id='note' placeholder='Your note here...'>
+                </div>
+              </div>
+              <button id='addComment' class='btn btn-default btn-sm margin-top' (click)='newComment(destination)'>Add Comment</button>
+              <button id='addComment' class='btn btn-default btn-sm margin-top' (click)='removeLastComment(destination)'>Remove Comment</button>
+            </div>  
+          </div>
+        </div> 
+      </div>            
+    </form>
+  </div>
+  <div class='row'>
+    <div class='col-md-12 col-xs-12' >
+      <button type='submit' class='btn btn-default btn-submit btn-sm' data-toggle ='modal' data-target='#myModal'>Delete Trip</button>
+      <button type='submit' class='btn btn-default btn-submit btn-sm' (click)='add()'>Save Trip</button>
+      <button type='submit' class='btn btn-default btn-submit btn-sm' (click)='startNewTrip()'>New Trip</button>
+      <button type='button' class='btn btn-default btn-lg btn-submit btn-sm' (click)='newDestination()'>Add Destination</button>
+      <button type='button' class='btn btn-default btn-lg btn-submit btn-sm' (click)='removeLastDestination()'>Remove Destination</button>
+    </div>   
+  </div>
+</div>
+
+<!-- Modal -->     
+<div id="myModal" class="modal fade" role='dialog'>
+  <div class="modal-dialog">
+    
+    <!--Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this Trip?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal"(click)='deleteTrip()'>YES</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="gradient">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="italic">My trips</h1>
+    </div>
+  </div>
+</div>
+  <div class="row margin-top">
+    <div class='col-md-12' >
+      <div class="panel panel-default" *ngFor='let trip of tripsService.trips'>
+        <div class="panel-body" id="oneTrip">
+            <div class="col-xs-10 no-padding-right" (click)='tripClicked(trip)'>
+              <h4>{{trip.name}} </h4>
+            </div>
+            <div class="col-xs-2" id="deletebutton" (click)='setTrip(trip)'>
+              <button data-toggle ='modal' data-target='#deleteTripModal' class="btn btn-danger btn-xs fill-horizontal">X</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!-- Delete trip modal -->     
+<div id="deleteTripModal" class="modal fade" role='dialog'>
+  <div class="modal-dialog">
+    
+    <!--Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Confirmation</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this trip?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteTheTrip()">YES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   <!--<<div class='c' id='my-trips-history'>
+   <div class='row'>
+      <!-- <div class='col-md-12 previousTripText header'>
+        <h2>Previous trips</h2>
+      </div> 
+<div class='col-md-12 previousTrips' >
+  <ul class='list-group'>
+    <button class='list-group-item buttonWidth' *ngFor='let trip of tripsService.trips' (click)='tripClicked(trip)'>
+    {{ trip.name }}
+    </button>         
+  </ul> 
+
+  <div class='col-md-12 previousTrips' >
+  <div class="panel panel-default" *ngFor='let trip of tripsService.trips'>
+    <div class="panel-heading">{{trip.name}}<span class="accordionSpan"><button class="btn btn-sm" 
+    (click)='tripClicked(trip)'>
+    Details</button></span>
+    </div> 
+  </div>
+</div>
+
+</div>-->

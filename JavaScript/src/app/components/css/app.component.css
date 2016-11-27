@@ -1,0 +1,310 @@
+h1.italic {
+    font-family: Georgia;
+    font-style: italic;
+    color: #45C1E9;
+    text-align: center;    
+}
+
+/*h4 {
+    color: #45C1E9;  
+}*/
+
+.btn-submit{
+    float:right;
+    margin-left: 5pt;
+}
+
+.field-input-invalid{
+    border: 2px solid red;
+}
+
+.mainDiv {
+    margin: 100px auto;
+}
+
+.row {
+    margin: 0 1em;
+    margin-top: 10px; 
+}
+
+.previousTrips {
+     overflow: auto; 
+     height: 320px;
+     margin-bottom: 20px;
+     margin-top: 20px;
+}
+
+.previousTripText {
+    margin: 0 1em;
+    color: black;  
+}
+
+.header {
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.header4 {
+    text-align: left;
+}
+
+
+@media(max-width:466px){
+    #tbody{
+        font-size:10px;
+    }
+    .row .btn-submit{
+        font-size: 10px;
+    }
+
+    .hidden-on-desktop-e{
+     display: inline!important;
+    }
+
+
+}
+
+@media(max-width:576px){
+    #parking{
+        font-size:9px;
+    }
+    .row,.well{
+        margin:0;
+    }
+
+    .hidden-on-desktop-e{
+     display: inline!important;
+    }
+}
+
+@media(min-width:766px){
+
+    .hidden-on-desktop-e{
+        display: none!important;
+    }
+    
+    
+    .map-modal-h-f{
+        padding: 5px;
+    }
+    
+    .map-modal-b{
+        padding: 0px;
+    }
+    
+    .map-modal-1{
+        margin: 0px;
+    }
+    
+}
+
+    
+    
+
+/* meny */
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    max-height: 100%;
+}
+
+.active-color {
+    background-color: lightblue;
+}
+
+.padding-bottom {
+    padding-bottom: 16px;
+}
+
+.padding-top {
+    padding-top: 16px;
+}
+
+.margin-bottom {
+   margin-bottom: 8px; 
+}
+
+.margin-top {
+    margin-top: 8px;
+}
+
+margin-right {
+    margin-right: 8px;
+}
+
+margin-left {
+    margin-left: 8px;
+}
+
+.no-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+.no-padding-right {
+    padding-right: 0px;
+}
+
+.no-padding-left {
+    padding-left: 0px;
+}
+
+.transparent-high {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.transparent-medium {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.transparent-low {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.transparent-high-fill {
+    background: rgba(255, 255, 255, 0.6);
+    height: 100%;
+}
+
+.transparent-medium-fill {
+    background: rgba(255, 255, 255, 0.4);
+    height: 100%;
+}
+
+.transparent-low-fill { 
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+}
+
+.fill-horizontal {
+    width: 100%;
+}
+
+.fill-vertical {
+    height: 100%;
+}
+
+.center-horizontal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-padding-bottom {
+    padding-bottom: 70px;
+}
+
+#quickSearch {
+    margin-top: 100px;
+    display: block;
+}
+
+.accordionSpan {
+    float: right;
+}
+
+
+
+.headerCenter{
+    text-align: center;
+}
+
+#parkingMap{
+    background-color: #E4E3DF;
+    position: absolute; 
+    height: 0;
+    overflow: hidden; 
+    width: 100% !important;
+    height: 100% !important;
+}
+/*
+    rör ej ROY!!
+*/
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.colorBlue {
+    color: #40C2E6;
+    text-align: center;
+}
+
+.colorOrange {
+    color: #BD7056;
+    text-align: center;
+    text-align: center;
+}
+.colorPink {
+    color: #C991B8;
+    text-align: center;
+}
+.colorLightP {
+    color: #D2B2C9;
+    text-align: center;
+}
+
+.colorPale {
+    color: #DBCBD5;
+    text-align: center;
+}
+.colorP {
+    color: #B55173;
+    text-align: center;
+}
+
+.colorPi {
+    color: #B55173;
+}
+
+.colorPi-link{
+    color: #813750;
+    text-decoration: underline;
+}
+
+.container-p {
+    background: #082A45;
+    margin-left: 8px;
+    margin-left: 8px;
+}
+.gradient {
+    background:linear-gradient(transparent,#082A45);
+}
+
+.no-margin-bottom {
+   margin-bottom: 0px; 
+}
+
+#oneTrip{
+    padding:0px;
+}
+
+#deletebutton{
+    padding-top:10px;
+}
+
+
+.tiny-marign-right{
+    margin-right: 15px;
+}
+
+#parkingIcon{
+    padding:0px;
+}

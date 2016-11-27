@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- <This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+  
+  <title>Find Parking Göteborg</title>
+  <base href="/">
+  <script>document.write('<base href="' + ('' + document.location).replace('index.html', '') + '" />');</script>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+
+  <!-- Service worker support is disabled by default.
+       Install the worker script and uncomment to enable.
+       Only enable service workers in production.
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/worker.js').catch(function(err) {
+        console.log('Error installing service worker: ', err);
+      });
+    }
+  </script>
+  -->
+   <style type="text/css">
+    body {
+      background-image: url('car-background.png'); 
+      background-size: cover;
+      padding-top: 70px;
+    }
+      
+    @media(max-width:466px){
+      body {
+        background-attachment: fixed;
+        background-position: center;  
+         padding-top: 70px;
+      }
+    }
+    
+    .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+   </style>
+</head>
+<body>
+  <find-parking-goteborg-app><div class="loader"></div></find-parking-goteborg-app>
+
+  <script src="vendor/es6-shim/es6-shim.js"></script>
+  <script src="vendor/reflect-metadata/Reflect.js"></script>
+  <script src="vendor/systemjs/dist/system.src.js"></script>
+  <script src="vendor/zone.js/dist/zone.js"></script>
+  
+  <script src="vendor/ng2-bootstrap/bundles/ng2-bootstrap.min.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script>
+    System.import('system-config.js').then(function () {
+      System.import('main');
+    }).catch(console.error.bind(console));
+  </script>  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<div class='col-xs-12 transparent-high well' *ngIf='destination.parking.length > 0'>
+  <table class='table table-hover'>
+    <thead>
+      <th>Parking Name</th>
+      <th>Parking Distance</th>
+      <th>Parking Cost</th>
+      <th>Parking Time</th>
+    </thead>
+    <tbody id='tbody'>
+      <tr *ngFor='let parking of destination.parking' >
+        <td> {{ parking.name }} </td>
+        <td> {{ parking.distance }} m </td>
+        <td> {{ parking.cost }} </td>
+        <td> {{ parking.maxTime }} </td>
+        <td><button class="btn btn-default" data-toggle="modal" (click)="parkingClick(parking)" data-target="#myModal">Map</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">          
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div *ngIf="parking">
+          <h4 class="modal-title">{{ parking.name }}</h4>
+          <p>{{ parking.distance }} meter till din destination från denna parkering.</p>
+          <p>{{ parking.cost }}</p>
+          <p>{{ parking.time }}</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <google-maps [parking]="parking"></google-maps>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>   
+  </div>
+</div>
